@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
+import Simple from "./Simple";
 
 const Kinds = () => {
   const [kinds, setKinds] = useState([]);
@@ -22,10 +24,11 @@ const Kinds = () => {
       <h2>Kinds of Arguments</h2>
       {kinds.map((kind) => (
         <div>
-          <h3>{kind.kind}</h3>
+          <h2>{kind.kind}</h2>
           <p>{kind.definition}</p>
         </div>
       ))}
+      <Link to='/protected/simple'>Examples of arguments</Link>
     </div>
   );
 };

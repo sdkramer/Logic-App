@@ -21,7 +21,8 @@ class Login extends React.Component {
   login = (e) => {
     e.preventDefault();
     Axios.post('http://localhost:4000/login', this.state.credentials).then((res) => {
-console.log(res);
+localStorage.setItem('token', res.data.payload);
+this.props.history.push('/protected')
     })
     .catch((err) => {console.log(err);})
   };

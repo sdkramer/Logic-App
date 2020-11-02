@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Kinds from "./Kinds";
 import Login from './Login';
+import PrivateRoute from './PrivateRoute';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
        </li>
      </ul>
      <Switch>
-       <Route exact path='/protected' component={Kinds} />
+       <PrivateRoute exact path='/protected' component={Kinds} />
        <Route path='/login' component={Login} />
      </Switch>
     </div>

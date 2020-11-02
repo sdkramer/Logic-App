@@ -1,3 +1,4 @@
+import Axios from "axios";
 import React from "react";
 
 class Login extends React.Component {
@@ -19,7 +20,10 @@ class Login extends React.Component {
 
   login = (e) => {
     e.preventDefault();
-    console.log(e);
+    Axios.post('http://localhost:4000/login', this.state.credentials).then((res) => {
+console.log(res);
+    })
+    .catch((err) => {console.log(err);})
   };
 
   render() {

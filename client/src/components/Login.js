@@ -27,6 +27,8 @@ this.props.history.push('/protected')
     .catch((err) => {console.log(err);})
   };
 
+ 
+
   render() {
     return(
 <div>
@@ -47,6 +49,7 @@ this.props.history.push('/protected')
         />
         <button>Log in</button>
       </form>
+      
     </div>
     )
     

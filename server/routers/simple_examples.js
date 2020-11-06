@@ -12,4 +12,14 @@ res.json(examples)
 }
 })
 
+router.post('/simple', async (req, res, next) => {
+ try {
+const newEx = await SExample.add(req.body)
+console.log(newEx)
+res.status(201).json(newEx)
+ } catch(err){
+   next(err)
+ }
+})
+
 module.exports = router

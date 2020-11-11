@@ -28,7 +28,7 @@ const Kinds = () => {
           <p>{kind.definition}</p>
         </div>
       ))}
-      <Link to='/protected/simple'>Examples of arguments</Link>
+      {/* <Link to='/protected/simple'>Examples of arguments</Link> */}
     </div>
   );
 };

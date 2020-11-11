@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 const initialAddArg = {
-  // kind_id: '',
+  kind_id: '',
   argument: '',
   untying: ''
 }

@@ -53,7 +53,7 @@ this.props.history.push('/protected')
     </div>
     )
     
-  }
+  }ß
 }
 
 export default Login;

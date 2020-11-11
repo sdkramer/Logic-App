@@ -22,4 +22,12 @@ res.status(201).json(newEx)
  }
 })
 
+router.delete('/simple/:id', async (req, res, next) => {
+  try {
+await SExample.remove(req.params.id)
+  } catch(err) {
+    next(err)
+  }
+})
+
 module.exports = router

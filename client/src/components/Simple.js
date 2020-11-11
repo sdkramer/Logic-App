@@ -2,6 +2,7 @@ import Axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import AddForm from './AddForm'
+import Delete from './Delete'
 
 
 
@@ -39,7 +40,7 @@ axios.get('http://localhost:4000/simple')
 //   .then((res) => {
 //     console.log('add arg res: ', res)
 //   })
-//   .catch((err) => {console.log(err)})
+//   .catch((err) => {console.log(err)}
 // }
 
   return (
@@ -53,6 +54,7 @@ axios.get('http://localhost:4000/simple')
       <p>{arg.argument}</p>
       <h3>Untying:</h3>
       <p>{arg.untying}</p>
+      <Delete args={args} />
       
     </div>
   ))}

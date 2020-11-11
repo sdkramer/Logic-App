@@ -9,7 +9,12 @@ function add(example) {
   .insert(example)
 }
 
+function remove(id) {
+  return db(simple_examples).where(id).del()
+}
+
 module.exports = {
   find,
-  add
+  add,
+  remove
 }
